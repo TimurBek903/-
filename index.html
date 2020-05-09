@@ -1,70 +1,202 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Табличная вёрстка</title>
-	<style tupe="text/css">
-		body {
-			color:linen;
-			background-color:#808080 
-		}
+	<head>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		
+		<style type="text/css">
+			@import url(https://fonts.googleapis.com/css?family=Didact+Gothic|Comfortaa:400,700&subset=latin,cyrillic);
 
-		.main {
-			margin-left: 7%; 
-			margin-right: 7%; 
-			margin-top: 25px; 
-		}
+			body{
+				background-color: #8C8C8C;
+				font-family: 'Comfortaa', serif;
+				padding-bottom: 30px; 
+			}
 
-		.menu {
-			margin: 25px;
-		}
-	</style>
-</head>
-<body>
-	<div class="main"> 
-		<font color=red size=+2>В начале было Слово</font>
-		<table border="1" cellpadding="0" cellspacing="0" width="100%" style="margin-top: 10px"> 
-			<tr>
-				<th width="20%" style='font-size: 20px; line-height: 27px'>Меню</th>
-				<th width="80%" style='font-size: 20px; line-height: 27px'>Из истории кнингохранилищ</th> 
-			</tr>
-			<td width="20%">
-				<div class="menu">
-					Века
-					<ul>
-						<li><a href="index.html" title="Ссылка 1">С начало мира по XV</a></li> 
-						<li><a href="index.html" title="Ссылка 2">XVI</a></li>
-						<li><a href="index.html" title="Ссылка 3">XVII</a></li>
-						<li><a href="index.html" title="Ссылка 4">XVIII</a></li>
-						<li><a href="index.html" title="Ссылка 5">XIX</a></li>
-						<li><a href="index.html" title="Ссылка 6">XX</a></li>
-					</ul>
-					Авторы
-					<ul>
-						<li><a href="index.html" title="Ссылка 8">Пушкин</a></li>
-						<li><a href="index.html" title="Ссылка 9">Достоевский</a></li>
-						<li><a href="index.html" title="Ссылка 10">Гоголь</a></li>
-						<li><a href="index.html" title="Ссылка 11">Нестор</a></li>
-						<li><a href="index.html" title="Ссылка 12">Сильвестор</a></li>
-						<li><a href="index.html" title="Ссылка 13">Шекспир</a></li>
-						<li><a href="index.html" title="Ссылка 14">Булгаков</a></li>
-						<li><a href="index.html" title="Ссылка 16">Чуковский</a></li>
-						<li><a href="index.html" title="Ссылка 165">Все авторы</a></li>
+			.btn{
+				width: 540px;
+				margin: 6px;
+				color: #fff;
+				background-color: #404040;
+				border-color: #00000000;
+				text-decoration: none;
+				padding: .7em 1.5em;
+				outline: none; 
+				border-radius: 2px;
+				border: 0;
+			}
+
+			.btn:hover {
+				background: #666666;
+				outline: none; 
+				border: 0;
+			}
+
+			.btn:active {
+				outline: none;
+				border: 0; 
+			}
+
+			.btn::-moz-focus-inner 
+			{
+				border: 0;
+			}
+
+			.container{
+				width: 1200px
+			}
+
+			.modal-content{
+				border-radius: 2px
+			}
+
+			footer{
+				position: fixed;
+				bottom: 0;
+				background-color: #666666;
+				width: 100%;
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #666666">
+			<div class="container">	
+				<a class="navbar-brand" href="">ЛОГОТИП</a>
+				<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+					<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+						<li class="nav-item">
+							<a class="nav-link" href="">Главная</a>
+						</li>
+
+						<!--
+
+						<li class="nav-item">
+							<a class="nav-link" href="../Главная/Main.html">Главная</a>
+						</li>
+
+						-->
+
 					</ul>
 				</div>
-			</td>
-			<td width="80%">
-				<div class="menu">
-					<p><font color=red size=+1>Здравствуете! Рады приветствовать вас на нашем сайте. Приятного использования контента!</font></p>
-					<p>Первые библиотеки появились на древнем Востоке. Самая древняя из обнаруженных библиотек — собрание глиняных табличек, 2500 год до н. э., найденное в храме шумерского города Ниппур. Самая известная древневосточная библиотека — собрание клинописных табличек из дворца ассирийского царя VII века до н. э. Ашшурбанипала.</p>
-					<p>Крупнейшим центром античной книжности стала Александрийская библиотека, созданная в III веке до н. э. Птолемеем. Она была центром образования эллинистического мира. Фонд знаменитой Александрийской библиотеки, одного из семи чудес Древнего мира, составлял до 800 тысяч текстов на многих языках. Согласно легенде, во время голода в Афинах Птоломей ІІІ  согласился продать грекам хлеб только с одним условием – ему дадут скопировать редкие книги. Греки согласились дать книги под очень большой залог золотом, а Птоломей решил оставить книги себе, лишившись залога. Он понимал, что знания гораздо ценнее благородного металла. К сожалению, Пожар 273 года уничтожил полностью эту библиотеку.</p>
-					<p>В Средние века книгохранилища были при монастырях. В них не только переписывалось не только Священное писание и сочинения Отцов Церкви, но и произведения античных авторов. В эпоху Ренессанса деятели Возрождения охотились за сохранявшимися в монастырях греческими и латинскими текстами. Из-за огромной стоимости манускриптов и трудоёмкости их изготовления книги приковывались к библиотечным полкам цепями. </p>
-					<p>Первой русской библиотекой считается библиотека при Софийском соборе в Киеве, основанная, предположительно, в 1037г. Здесь хранилось самое полное собрание письменных памятников древней Руси – Евангелия, Ветхий Завет, Апокалипсис, Апостол, жития святых; хранились и важные государственные документы. Таким собранием в то время могли похвастаться не многие библиотеки Европы. Неизвестно, куда пропала библиотека Ярослава Мудрого: возможно, она погибла во время большого пожара 1124 г., возможно, была уничтожена в 1240 г. во время разгрома Киева войсками Батыя.</p> 
-					<p>Татаро-монгольское иго нанесло серьёзный ущерб культуре Древней Руси. Во время уничтожения монголо-татарами русских городов погибло множество памятников литературы и письменности, или сохранились только в копиях. Также во многих русских городах исчезли хранилища книг. </p>
-					<p>Серьезный урон был нанесен делу летописания, до того получившему большое развитие на Руси. Вплоть до конца XIII столетия содержание летописей в значительной степени оставалось скудным. По оценкам В. В. Каргалова, в текстах «утратилась живость домонгольских летописцев». В летописных сводах второй половины XIII века основное место занимали сообщения о поездках князей в Орду, княжеских усобицах и церковных событиях...</p>
+			</div>
+		</nav>
+		<div class="container">	
+			<div class="row">
+				<div class="col">
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#FirstModal">
+						Братство Кольца
+					</button>
+
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#SecondModal">
+						Две крепости
+					</button>
+
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ThirdModal">
+						Возвращение короля
+					</button>
+
+					<!--
+
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+						Запустить модальное окно
+					</button>
+					
+					-->
 
 				</div>
-			</td>
-		</table>
-	</div>
-</body>
+			</div>
+		</div>
+		<footer>
+			<div class="container">
+				Я без понятия, что сюда написать
+			</div>
+		</footer>
+
+		<!-- Hic sunt dracones --> 
+
+		<div class="modal fade" id="FirstModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body ">
+						111111111111111111111111111111111111111
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="SecondModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						22222222222222222222222222222222222222
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="ThirdModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						333333333333333333333333333333333333333333333333333333333333
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--
+
+		<div class="modal fade" id="ThirdModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						333333333333333333333333333333333333333333333333333333333333
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		-->
+	</body>
 </html>
